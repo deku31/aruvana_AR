@@ -13,11 +13,15 @@ public class ObjectScript : MonoBehaviour
 
     public Renderer ren;
 
-    [Header("swipe")]
-    [SerializeField] private float _rotationSpeed = 10f;
 
-    private Vector2 _startPosition;
-    private float _rotationAngle = 0f;
+
+    // rotation
+    public float rotateSpeed = 5.0f;
+
+    private Vector2 initialTouchPosition2;
+    private float initialRotation;
+    private bool isRotating = false;
+    public Transform target2;
 
     void Awake()
     {
@@ -28,22 +32,32 @@ public class ObjectScript : MonoBehaviour
     {
         ren.material.color = Color.Lerp(starColor, EndColor, Mathf.PingPong(Time.time * speed, 1));
 
-        //swipe script
+        if (Input.touchCount == 1)
+        {
+            Touch touch = Input.GetTouch(0);
 
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            _startPosition = Input.GetTouch(0).position;
+            if (touch.phase == TouchPhase.Began)
+            {
+                initialTouchPosition2 = touch.position;
+                initialRotation = transform.eulerAngles.y;
+                isRotating = true;
+            }
+            else if (touch.phase == TouchPhase.Moved && isRotating)
+            {
+                float rotationFactor = touch.deltaPosition.x * rotateSpeed * Time.deltaTime;
+                float newRotation = initialRotation + rotationFactor;
+
+                target2.rotation = Quaternion.Euler(0, newRotation, 0);
+            }
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+                isRotating = false;
+            }
         }
-        else if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
+        else
         {
-            Vector2 currentPosition = Input.GetTouch(0).position;
-            Vector2 direction = currentPosition - _startPosition;
-            float rotationAngle = Vector2.SignedAngle(Vector2.up, direction);
-            transform.rotation = Quaternion.Euler(0f, _rotationAngle - rotationAngle * _rotationSpeed, 0f);
-        }
-        else if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            _rotationAngle = transform.eulerAngles.y;
+            isRotating = false;
         }
     }
+
 }

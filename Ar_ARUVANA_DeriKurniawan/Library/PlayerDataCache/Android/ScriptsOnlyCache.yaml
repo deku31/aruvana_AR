@@ -1,10 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - GameManager
+    - ObjectScript
+    - ScreenShootAndShare
+    - zoom
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
@@ -31,15 +35,21 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
-    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.Outline
     Vuforia.Unity.Engine.dll:
+    - Vuforia.ImageTargetBehaviour
+    - Vuforia.ImageTargetPreview
+    - Vuforia.VuforiaBehaviour
     - Vuforia.VuforiaConfiguration
+    VuforiaScripts.dll:
+    - DefaultInitializationErrorHandler
+    - DefaultObserverEventHandler
   sceneClasses:
-    Assets/Scenes/Exercise 2.unity:
+    Assets/Scenes/Exercise 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -50,13 +60,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -67,9 +91,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1620}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1762}
     - Class: 114
-      Script: {instanceID: 1750}
+      Script: {instanceID: 1790}
+    - Class: 114
+      Script: {instanceID: 1816}
     - Class: 114
       Script: {instanceID: 1892}
     - Class: 114
@@ -77,26 +103,48 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2604}
     - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
       Script: {instanceID: 2780}
     - Class: 114
+      Script: {instanceID: 2816}
+    - Class: 114
       Script: {instanceID: 2834}
+    - Class: 114
+      Script: {instanceID: 2912}
+    - Class: 114
+      Script: {instanceID: 2914}
+    - Class: 114
+      Script: {instanceID: 2992}
     - Class: 114
       Script: {instanceID: 2994}
     - Class: 114
       Script: {instanceID: 3350}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 3722}
     - Class: 114
-      Script: {instanceID: 5350}
+      Script: {instanceID: 3828}
+    - Class: 114
+      Script: {instanceID: 4892}
+    - Class: 114
+      Script: {instanceID: 5352}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -187,7 +235,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 93aafadd1353b06344677ee7d10fd2bd
+      Hash: 3c7b546b58b06abcd3ef0238f6a4b6d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectScript
@@ -265,7 +313,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: c4eb3086c562156d15b1ab6f16010052
+      Hash: 1ace5de31f2276a3d4bf85978f80ba1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: zoom
@@ -773,6 +821,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: ec25347d78f85f69793383c98ebe0e7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeConvress
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -2171,13 +2225,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: ec25347d78f85f69793383c98ebe0e7f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimeConvress
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Exercise 2.unity
-  playerPath: C:/Users/acer/Documents/GitHub Repositori/build/Exercise 2.apk
+  - Assets/Scenes/Exercise 1.unity
+  playerPath: C:/Users/acer/Documents/GitHub Repositori/build/Exercise 1.apk

@@ -1169,8 +1169,6 @@ MonoBehaviour:
   minZoom: 0.5
   maxZoom: 2
   target: {fileID: 34454756}
-  target2: {fileID: 1509260967}
-  rotateSpeed: 5
 --- !u!1 &1093813045
 GameObject:
   m_ObjectHideFlags: 0
@@ -15956,6 +15954,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509260967}
+  - component: {fileID: 1509260969}
+  - component: {fileID: 1509260968}
   m_Layer: 0
   m_Name: parent
   m_TagString: Untagged
@@ -15982,6 +15982,36 @@ Transform:
   m_Father: {fileID: 34454756}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1509260968
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509260966}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!136 &1509260969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509260966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 13.713966
+  m_Height: 52.31735
+  m_Direction: 1
+  m_Center: {x: 0.28485107, y: 25.658674, z: 0}
 --- !u!1 &1591198000
 GameObject:
   m_ObjectHideFlags: 0
@@ -21814,6 +21844,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1.37
       objectReference: {fileID: 0}
+    - target: {fileID: 375445091331393144, guid: a58dbe4a021f1fc428ddc9954f519366, type: 3}
+      propertyPath: target2
+      value: 
+      objectReference: {fileID: 1509260967}
     - target: {fileID: 717392320413871515, guid: a58dbe4a021f1fc428ddc9954f519366, type: 3}
       propertyPath: m_Name
       value: aruvana_black
