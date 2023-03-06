@@ -13,16 +13,6 @@ public class zoom : MonoBehaviour
     private float initialDistance;
     private bool isZooming = false;
     public Transform target;
-    public Transform target2;
-
-
-    // rotation
-    public float rotateSpeed = 5.0f;
-
-    private Vector2 initialTouchPosition2;
-    private float initialRotation;
-    private bool isRotating = false;
-
 
     void Start()
     {
@@ -60,31 +50,5 @@ public class zoom : MonoBehaviour
             isZooming = false;
         }
 
-        if (Input.touchCount == 1)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                initialTouchPosition2 = touch.position;
-                initialRotation = transform.eulerAngles.y;
-                isRotating = true;
-            }
-            else if (touch.phase == TouchPhase.Moved && isRotating)
-            {
-                float rotationFactor = touch.deltaPosition.x * rotateSpeed * Time.deltaTime;
-                float newRotation = initialRotation + rotationFactor;
-
-                target2.rotation = Quaternion.Euler(0, newRotation,0);
-            }
-            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-            {
-                isRotating = false;
-            }
-        }
-        else
-        {
-            isRotating = false;
-        }
     }
 }
