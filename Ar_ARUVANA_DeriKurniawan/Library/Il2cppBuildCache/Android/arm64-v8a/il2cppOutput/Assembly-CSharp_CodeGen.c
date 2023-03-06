@@ -90,7 +90,15 @@ extern void zoom_Start_mD65FE5D6A3488FFB6928393C45650C6E3D6C0A6F (void);
 extern void zoom_Update_m4B2CC9140157A92D888B0C7BEE181DFD0B3D00EA (void);
 // 0x00000027 System.Void zoom::.ctor()
 extern void zoom__ctor_m9CB487067FD56B051EEDBCAC220481B37E62941F (void);
-static Il2CppMethodPointer s_methodPointers[39] = 
+// 0x00000028 System.Void TimeConvress::Start()
+extern void TimeConvress_Start_mFCCC6DC6374A9D34808F784CB02014FE87AC1845 (void);
+// 0x00000029 System.Void TimeConvress::UpdateTime()
+extern void TimeConvress_UpdateTime_m52D7B9C2B5CF9EE8DC37DA0D70BAB0F7079F6675 (void);
+// 0x0000002A System.String TimeConvress::TimeConversion(System.String)
+extern void TimeConvress_TimeConversion_m353F738CF8D3BD6025E3F62EF7DEFDAFD6DE9CDE (void);
+// 0x0000002B System.Void TimeConvress::.ctor()
+extern void TimeConvress__ctor_mFCC9C61CC6680BDAE1A31D7999BEF05122C13221 (void);
+static Il2CppMethodPointer s_methodPointers[43] = 
 {
 	GameManager_FireSoundPlay_m0A530B8FB6AF1D3E48106F3EF8DDA566FC2FD110,
 	GameManager_FireSoundStop_m7F9CF9F662FAC1598E692C70F3DB2D97F13E175D,
@@ -131,55 +139,63 @@ static Il2CppMethodPointer s_methodPointers[39] =
 	zoom_Start_mD65FE5D6A3488FFB6928393C45650C6E3D6C0A6F,
 	zoom_Update_m4B2CC9140157A92D888B0C7BEE181DFD0B3D00EA,
 	zoom__ctor_m9CB487067FD56B051EEDBCAC220481B37E62941F,
+	TimeConvress_Start_mFCCC6DC6374A9D34808F784CB02014FE87AC1845,
+	TimeConvress_UpdateTime_m52D7B9C2B5CF9EE8DC37DA0D70BAB0F7079F6675,
+	TimeConvress_TimeConversion_m353F738CF8D3BD6025E3F62EF7DEFDAFD6DE9CDE,
+	TimeConvress__ctor_mFCC9C61CC6680BDAE1A31D7999BEF05122C13221,
 };
-static const int32_t s_InvokerIndices[39] = 
+static const int32_t s_InvokerIndices[43] = 
 {
-	3579,
-	3579,
-	3579,
-	3579,
-	3579,
-	3579,
-	3579,
-	3579,
-	3579,
-	3518,
-	3579,
-	2549,
-	3579,
-	3579,
-	3579,
-	3579,
-	3518,
-	3579,
-	2822,
-	3579,
-	3466,
-	3518,
-	3579,
-	3518,
-	2822,
-	3579,
-	3466,
-	3518,
-	3579,
-	3518,
-	2822,
-	3579,
-	3466,
-	3518,
-	3579,
-	3518,
-	3579,
-	3579,
-	3579,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	3513,
+	3574,
+	2545,
+	3574,
+	3574,
+	3574,
+	3574,
+	3513,
+	3574,
+	2817,
+	3574,
+	3461,
+	3513,
+	3574,
+	3513,
+	2817,
+	3574,
+	3461,
+	3513,
+	3574,
+	3513,
+	2817,
+	3574,
+	3461,
+	3513,
+	3574,
+	3513,
+	3574,
+	3574,
+	3574,
+	3574,
+	3574,
+	2542,
+	3574,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	39,
+	43,
 	s_methodPointers,
 	0,
 	NULL,
